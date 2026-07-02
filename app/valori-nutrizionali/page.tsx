@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Reveal from "@/components/Reveal";
+import { StaggerGroup, StaggerItem } from "@/components/Stagger";
 
 export const metadata: Metadata = {
   title: "Valori Nutrizionali — Oliopietra",
@@ -22,16 +24,15 @@ export default function ValoriNutrizionali() {
     <div className="min-h-screen">
       {/* Hero */}
       <section
-        className="relative h-[55vh] flex items-end px-6 pb-16"
+        className="relative h-[55vh] flex items-end px-6 pb-16 overflow-hidden"
         style={{
-          backgroundImage:
-            'url("/images/frantoio-01.jpg")',
+          backgroundImage: 'url("/images/frantoio-01.jpg")',
           backgroundSize: "cover",
           backgroundPosition: "center 40%",
         }}
       >
-        <div className="absolute inset-0 bg-dark/65" />
-        <div className="relative z-10 max-w-6xl w-full mx-auto">
+        <div className="absolute inset-0 bg-linear-to-t from-dark via-dark/60 to-dark/30" />
+        <Reveal className="relative z-10 max-w-6xl w-full mx-auto">
           <p className="text-xs tracking-[0.4em] text-gold/70 uppercase mb-4">
             Informazioni nutrizionali
           </p>
@@ -44,38 +45,37 @@ export default function ValoriNutrizionali() {
           <p className="text-ivory/50 mt-2 text-sm tracking-wide">
             su 100 ml di prodotto
           </p>
-        </div>
+        </Reveal>
       </section>
 
       {/* Table */}
-      <section className="bg-beige-page py-20 px-6">
+      <section className="bg-beige-page py-24 px-6">
         <div className="max-w-2xl mx-auto">
-          <div className="divide-y divide-stone/20">
+          <StaggerGroup className="divide-y divide-stone/20">
             {valori.map(({ label, value, indent }) => (
-              <div
-                key={label}
-                className={`flex items-baseline justify-between py-5 ${indent ? "pl-5" : ""}`}
-              >
-                <span
-                  className={`${
-                    indent ? "text-dark/50 text-sm" : "text-dark"
-                  }`}
-                  style={
-                    !indent
-                      ? { fontFamily: "var(--font-cormorant)", fontSize: "1.1rem" }
-                      : {}
-                  }
+              <StaggerItem key={label}>
+                <div
+                  className={`flex items-baseline justify-between py-5 ${indent ? "pl-5" : ""}`}
                 >
-                  {label}
-                </span>
-                <span className="text-dark/70 text-sm font-medium tabular-nums">
-                  {value}
-                </span>
-              </div>
+                  <span
+                    className={`${indent ? "text-dark/50 text-sm" : "text-dark"}`}
+                    style={
+                      !indent
+                        ? { fontFamily: "var(--font-cormorant)", fontSize: "1.1rem" }
+                        : {}
+                    }
+                  >
+                    {label}
+                  </span>
+                  <span className="text-dark/70 text-sm font-medium tabular-nums">
+                    {value}
+                  </span>
+                </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerGroup>
 
-          <div className="mt-14 border-t border-stone/20 pt-8">
+          <Reveal delay={0.2} className="mt-14 border-t border-stone/20 pt-8">
             <p className="text-dark/40 text-xs leading-relaxed">
               I valori nutrizionali sono calcolati su 100 ml di olio extravergine
               d&apos;oliva Oliopietra. Il prodotto è naturalmente privo di carboidrati,
@@ -83,7 +83,7 @@ export default function ValoriNutrizionali() {
               naturale di vitamina E, polifenoli e antiossidanti, con un profilo lipidico
               ricco di acidi grassi monoinsaturi.
             </p>
-          </div>
+          </Reveal>
         </div>
       </section>
     </div>

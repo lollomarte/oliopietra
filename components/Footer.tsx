@@ -8,8 +8,16 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-dark border-t border-gold/10">
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+    <footer className="relative bg-dark border-t border-gold/10 overflow-hidden">
+      <p
+        aria-hidden
+        className="pointer-events-none select-none absolute -bottom-10 sm:-bottom-16 left-1/2 -translate-x-1/2 text-[18vw] leading-none whitespace-nowrap font-light text-ivory/[0.03]"
+        style={{ fontFamily: "var(--font-cormorant)" }}
+      >
+        OLIOPIETRA
+      </p>
+
+      <div className="relative max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
           <p
             className="text-2xl tracking-[0.35em] text-gold font-light mb-4"
@@ -33,7 +41,7 @@ export default function Footer() {
               <Link
                 key={href}
                 href={href}
-                className="text-ivory/50 hover:text-gold text-sm transition-colors"
+                className="text-ivory/50 hover:text-gold text-sm transition-colors w-fit"
               >
                 {label}
               </Link>
@@ -46,17 +54,17 @@ export default function Footer() {
             Contatti
           </p>
           <div className="flex flex-col gap-3 text-sm text-ivory/50">
-            <a href="tel:+393401756876" className="hover:text-gold transition-colors">
+            <a href="tel:+393401756876" className="hover:text-gold transition-colors w-fit">
               +39 340 175 6876
             </a>
-            <a href="mailto:contact@oliopietra.it" className="hover:text-gold transition-colors">
+            <a href="mailto:contact@oliopietra.it" className="hover:text-gold transition-colors w-fit">
               contact@oliopietra.it
             </a>
             <a
               href="https://www.instagram.com/Oliopietra"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gold transition-colors inline-flex items-center gap-2 mt-2"
+              className="hover:text-gold transition-colors inline-flex items-center gap-2 mt-2 w-fit"
             >
               <InstagramIcon />
               @Oliopietra
@@ -65,7 +73,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-gold/10 py-6 text-center text-ivory/20 text-xs tracking-wider">
+      <div className="relative border-t border-gold/10 py-6 text-center text-ivory/20 text-xs tracking-wider">
         © {new Date().getFullYear()} Oliopietra. Tutti i diritti riservati.
       </div>
     </footer>

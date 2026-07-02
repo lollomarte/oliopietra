@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Contatti — Oliopietra",
@@ -9,10 +10,18 @@ export const metadata: Metadata = {
 
 export default function Contatti() {
   return (
-    <div className="bg-beige-page text-dark min-h-screen pt-16">
-      <section className="max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+    <div className="relative bg-beige-page text-dark min-h-screen pt-16 overflow-hidden">
+      <p
+        aria-hidden
+        className="pointer-events-none select-none absolute -top-4 sm:top-4 left-0 text-[16vw] leading-none whitespace-nowrap font-light text-dark/[0.035]"
+        style={{ fontFamily: "var(--font-cormorant)" }}
+      >
+        TUSCIA
+      </p>
+
+      <section className="relative max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
         {/* Left */}
-        <div>
+        <Reveal>
           <p className="text-xs tracking-[0.4em] text-stone/60 uppercase mb-6">
             Vieni a trovarci
           </p>
@@ -37,13 +46,13 @@ export default function Contatti() {
               <div className="space-y-2 text-dark/70">
                 <a
                   href="tel:+393401756876"
-                  className="block hover:text-dark transition-colors"
+                  className="block hover:text-olive transition-colors w-fit"
                 >
                   +39 340 175 6876
                 </a>
                 <a
                   href="mailto:contact@oliopietra.it"
-                  className="block hover:text-dark transition-colors"
+                  className="block hover:text-olive transition-colors w-fit"
                 >
                   contact@oliopietra.it
                 </a>
@@ -68,27 +77,27 @@ export default function Contatti() {
                 href="https://www.instagram.com/Oliopietra"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-dark/60 hover:text-dark transition-colors text-sm"
+                className="inline-flex items-center gap-2 text-dark/60 hover:text-olive transition-colors text-sm w-fit"
               >
                 <InstagramIcon />
                 @Oliopietra
               </a>
             </div>
           </div>
-        </div>
+        </Reveal>
 
         {/* Right — circle image */}
-        <div className="flex justify-center md:justify-end items-start pt-4">
-          <div className="relative w-72 h-72 sm:w-[400px] sm:h-[400px] rounded-full overflow-hidden shadow-2xl">
+        <Reveal delay={0.15} className="flex justify-center md:justify-end items-start pt-4">
+          <div className="group relative w-72 h-72 sm:w-[400px] sm:h-[400px] rounded-full overflow-hidden shadow-2xl ring-1 ring-dark/10">
             <Image
               src="/images/uliveto-tuscia.jpg"
               alt="Uliveto nella Tuscia, Lazio"
               fill
-              className="object-cover"
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               sizes="(max-width: 640px) 288px, 400px"
             />
           </div>
-        </div>
+        </Reveal>
       </section>
     </div>
   );
