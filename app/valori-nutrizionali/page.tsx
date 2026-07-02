@@ -25,7 +25,7 @@ export default function ValoriNutrizionali() {
         className="relative h-[55vh] flex items-end px-6 pb-16"
         style={{
           backgroundImage:
-            'url("https://www.oliopietra.it/wp-content/uploads/2024/12/frantoio-01.jpg")',
+            'url("/images/frantoio-01.jpg")',
           backgroundSize: "cover",
           backgroundPosition: "center 40%",
         }}

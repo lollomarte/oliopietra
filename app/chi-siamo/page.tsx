@@ -45,7 +45,7 @@ export default function ChiSiamo() {
 
         <div className="relative aspect-[3/4] rounded overflow-hidden shadow-2xl">
           <Image
-            src="https://www.oliopietra.it/wp-content/uploads/2024/12/Screenshot-2024-12-13-144132.png"
+            src="/images/bottiglia-scura.png"
             alt="Bottiglia Oliopietra"
             fill
             className="object-cover"
@@ -58,7 +58,7 @@ export default function ChiSiamo() {
       <section className="max-w-6xl mx-auto px-6 pb-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <div className="relative aspect-[3/4] rounded overflow-hidden shadow-2xl order-2 md:order-1">
           <Image
-            src="https://www.oliopietra.it/wp-content/uploads/2024/12/Screenshot-2024-12-13-144107.png"
+            src="/images/bottiglia-chiara.png"
             alt="Bottiglia Oliopietra"
             fill
             className="object-cover"

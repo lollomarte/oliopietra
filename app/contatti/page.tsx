@@ -81,7 +81,7 @@ export default function Contatti() {
         <div className="flex justify-center md:justify-end items-start pt-4">
           <div className="relative w-72 h-72 sm:w-[400px] sm:h-[400px] rounded-full overflow-hidden shadow-2xl">
             <Image
-              src="https://www.oliopietra.it/wp-content/uploads/2024/12/360_F_86470153_MKENqMIxb82dgXxmdMPccfrl6FaIvtC8.jpg"
+              src="/images/uliveto-tuscia.jpg"
               alt="Uliveto nella Tuscia, Lazio"
               fill
               className="object-cover"

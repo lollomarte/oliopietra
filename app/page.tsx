@@ -3,15 +3,15 @@ import Link from "next/link";
 
 const BOTTLE_IMGS = [
   {
-    src: "https://www.oliopietra.it/wp-content/uploads/2024/12/Screenshot-2024-12-13-143320.png",
+    src: "/images/bottiglia-blu.png",
     alt: "Oliopietra — bottiglia etichetta blu",
   },
   {
-    src: "https://www.oliopietra.it/wp-content/uploads/2024/12/Screenshot-2024-12-13-144132.png",
+    src: "/images/bottiglia-scura.png",
     alt: "Oliopietra — bottiglia etichetta scura",
   },
   {
-    src: "https://www.oliopietra.it/wp-content/uploads/2024/12/Screenshot-2024-12-13-144107.png",
+    src: "/images/bottiglia-chiara.png",
     alt: "Oliopietra — bottiglia etichetta chiara",
   },
 ];
@@ -39,7 +39,7 @@ export default function Home() {
         className="relative min-h-screen flex items-center justify-center text-center px-6"
         style={{
           backgroundImage:
-            'url("https://www.oliopietra.it/wp-content/uploads/2024/12/frantoio-01.jpg")',
+            'url("/images/frantoio-01.jpg")',
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
