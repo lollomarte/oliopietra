@@ -95,10 +95,10 @@ export default function Edizione() {
         </div>
 
         {/* Stats */}
-        <div className="relative bg-olive rounded-sm py-16 px-6 overflow-hidden">
+        <div className="relative bg-dark-mid border border-gold/10 rounded-sm py-16 px-6 overflow-hidden">
           <div
             aria-hidden
-            className="absolute inset-0 opacity-[0.06]"
+            className="absolute inset-0 opacity-[0.08]"
             style={{
               backgroundImage:
                 "radial-gradient(circle at 20% 30%, #f0ebe0 0, transparent 40%), radial-gradient(circle at 80% 70%, #c9a96e 0, transparent 40%)",
