@@ -6,10 +6,7 @@ import { useEffect, useState } from "react";
 const links = [
   { href: "#storia", label: "Storia" },
   { href: "#edizione", label: "L'Edizione" },
-  { href: "#territorio", label: "Territorio" },
   { href: "#valori", label: "Valori Nutrizionali" },
-  { href: "#abbinamenti", label: "Abbinamenti" },
-  { href: "#contatti", label: "Contatti" },
 ];
 
 export default function Navbar() {
@@ -63,7 +60,7 @@ export default function Navbar() {
           <span className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />
         </a>
 
-        <nav className="hidden lg:flex items-center gap-7">
+        <nav className="hidden md:flex items-center gap-7">
           {links.map(({ href, label }) => (
             <a
               key={href}
@@ -83,7 +80,7 @@ export default function Navbar() {
         </nav>
 
         <button
-          className="lg:hidden relative z-10 text-ivory/70 hover:text-gold transition-colors"
+          className="md:hidden relative z-10 text-ivory/70 hover:text-gold transition-colors"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Chiudi menu" : "Apri menu"}
           aria-expanded={open}
@@ -110,7 +107,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden fixed inset-0 top-16 bg-dark/98 backdrop-blur-sm flex flex-col justify-center px-10 gap-6 overflow-y-auto py-16"
+            className="md:hidden fixed inset-0 top-16 bg-dark/98 backdrop-blur-sm flex flex-col justify-center px-10 gap-6 overflow-y-auto py-16"
           >
             {links.map(({ href, label }, i) => (
               <motion.div

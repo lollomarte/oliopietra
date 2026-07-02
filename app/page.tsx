@@ -2,10 +2,7 @@ import Marquee from "@/components/Marquee";
 import Hero from "@/components/sections/Hero";
 import Storia from "@/components/sections/Storia";
 import Edizione from "@/components/sections/Edizione";
-import Territorio from "@/components/sections/Territorio";
 import ValoriNutrizionali from "@/components/sections/ValoriNutrizionali";
-import Abbinamenti from "@/components/sections/Abbinamenti";
-import Contatti from "@/components/sections/Contatti";
 
 const ticker = [
   "Tuscia, Lazio",
@@ -26,10 +23,7 @@ export default function Home() {
 
       <Storia />
       <Edizione />
-      <Territorio />
       <ValoriNutrizionali />
-      <Abbinamenti />
-      <Contatti />
     </>
   );
 }
