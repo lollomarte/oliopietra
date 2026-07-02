@@ -47,13 +47,13 @@ export default function Navbar() {
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-dark/90 backdrop-blur-md border-b border-gold/10 py-0"
-          : "bg-linear-to-b from-black/50 to-transparent border-b border-transparent py-2"
+          : "bg-linear-to-b from-black/65 to-transparent border-b border-transparent py-2"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a
           href="#hero"
-          className="group relative text-xl tracking-[0.35em] text-gold font-light shrink-0 z-10"
+          className="group relative text-xl tracking-[0.35em] text-gold font-light shrink-0 z-10 drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)]"
           style={{ fontFamily: "var(--font-cormorant)" }}
         >
           OLIOPIETRA

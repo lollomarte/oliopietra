@@ -30,15 +30,6 @@ export default function Hero() {
       <div className="absolute inset-0 bg-linear-to-b from-dark/60 via-dark/75 to-dark" />
 
       <motion.div style={{ opacity: contentOpacity }} className="relative z-10 max-w-2xl mx-auto">
-        <motion.p
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="text-xs tracking-[0.4em] text-gold/70 uppercase mb-8"
-        >
-          Tuscia, Lazio · Edizione Limitata a 10.000 Bottiglie
-        </motion.p>
-
         <h1
           className="text-4xl sm:text-5xl lg:text-6xl font-light leading-tight text-ivory mb-8 text-balance"
           style={{ fontFamily: "var(--font-cormorant)" }}
