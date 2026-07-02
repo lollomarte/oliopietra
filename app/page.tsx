@@ -63,14 +63,8 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/registra-bottiglia"
-              className="border border-gold text-gold hover:bg-gold hover:text-dark text-xs tracking-[0.2em] uppercase px-10 py-3.5 transition-colors"
-            >
-              Registra la tua Bottiglia
-            </Link>
-            <Link
               href="/chi-siamo"
-              className="border border-ivory/20 text-ivory/60 hover:border-ivory/50 hover:text-ivory text-xs tracking-[0.2em] uppercase px-10 py-3.5 transition-colors"
+              className="border border-gold text-gold hover:bg-gold hover:text-dark text-xs tracking-[0.2em] uppercase px-10 py-3.5 transition-colors"
             >
               Chi Siamo
             </Link>
@@ -118,25 +112,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-dark-mid py-24 px-6 text-center">
-        <p className="text-gold/50 text-xs tracking-[0.4em] uppercase mb-6">
-          Hai una bottiglia Oliopietra?
-        </p>
-        <h2
-          className="text-3xl sm:text-4xl font-light text-ivory mb-10"
-          style={{ fontFamily: "var(--font-cormorant)" }}
-        >
-          Registrala e garantiscine l&apos;autenticità.
-        </h2>
-        <Link
-          href="/registra-bottiglia"
-          className="inline-block bg-gold text-dark text-xs tracking-[0.2em] uppercase px-12 py-4 hover:bg-gold-light transition-colors"
-        >
-          Registra la tua Bottiglia
-        </Link>
       </section>
     </>
   );

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Contatti — Oliopietra",
@@ -75,15 +74,6 @@ export default function Contatti() {
                 @Oliopietra
               </a>
             </div>
-          </div>
-
-          <div className="mt-14 pt-8 border-t border-stone/20">
-            <Link
-              href="/registra-bottiglia"
-              className="inline-block border border-stone/40 text-dark/60 hover:bg-dark hover:text-ivory text-xs tracking-[0.2em] uppercase px-8 py-3 transition-colors"
-            >
-              Registra la tua Bottiglia →
-            </Link>
           </div>
         </div>
 

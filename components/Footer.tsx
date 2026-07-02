@@ -4,7 +4,6 @@ const navLinks = [
   { href: "/chi-siamo", label: "Chi Siamo" },
   { href: "/valori-nutrizionali", label: "Valori Nutrizionali" },
   { href: "/contatti", label: "Contatti" },
-  { href: "/registra-bottiglia", label: "Registra la tua Bottiglia" },
 ];
 
 export default function Footer() {
