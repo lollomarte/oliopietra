@@ -1,11 +1,3 @@
-import Link from "next/link";
-
-const navLinks = [
-  { href: "/chi-siamo", label: "Chi Siamo" },
-  { href: "/valori-nutrizionali", label: "Valori Nutrizionali" },
-  { href: "/contatti", label: "Contatti" },
-];
-
 export default function Footer() {
   return (
     <footer className="relative bg-dark border-t border-gold/10 overflow-hidden">
@@ -17,60 +9,41 @@ export default function Footer() {
         OLIOPIETRA
       </p>
 
-      <div className="relative max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
-        <div>
-          <p
-            className="text-2xl tracking-[0.35em] text-gold font-light mb-4"
-            style={{ fontFamily: "var(--font-cormorant)" }}
+      <div className="relative max-w-4xl mx-auto px-6 py-16 flex flex-col items-center text-center gap-6">
+        <p
+          className="text-2xl tracking-[0.35em] text-gold font-light"
+          style={{ fontFamily: "var(--font-cormorant)" }}
+        >
+          OLIOPIETRA
+        </p>
+        <p className="text-ivory/40 text-sm leading-relaxed">
+          Olio extravergine d&apos;oliva · Edizione limitata · Tuscia, Lazio
+        </p>
+
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-ivory/50 mt-2">
+          <a href="tel:+393401756876" className="hover:text-gold transition-colors">
+            +39 340 175 6876
+          </a>
+          <a href="mailto:contact@oliopietra.it" className="hover:text-gold transition-colors">
+            contact@oliopietra.it
+          </a>
+          <a
+            href="https://www.instagram.com/Oliopietra"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gold transition-colors inline-flex items-center gap-2"
           >
-            OLIOPIETRA
-          </p>
-          <p className="text-ivory/40 text-sm leading-relaxed">
-            Olio extravergine d&apos;oliva
-            <br />
-            Edizione limitata · Tuscia, Lazio
-          </p>
+            <InstagramIcon />
+            @Oliopietra
+          </a>
         </div>
 
-        <div>
-          <p className="text-gold/50 text-xs tracking-widest uppercase mb-5">
-            Pagine
-          </p>
-          <div className="flex flex-col gap-3">
-            {navLinks.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className="text-ivory/50 hover:text-gold text-sm transition-colors w-fit"
-              >
-                {label}
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <p className="text-gold/50 text-xs tracking-widest uppercase mb-5">
-            Contatti
-          </p>
-          <div className="flex flex-col gap-3 text-sm text-ivory/50">
-            <a href="tel:+393401756876" className="hover:text-gold transition-colors w-fit">
-              +39 340 175 6876
-            </a>
-            <a href="mailto:contact@oliopietra.it" className="hover:text-gold transition-colors w-fit">
-              contact@oliopietra.it
-            </a>
-            <a
-              href="https://www.instagram.com/Oliopietra"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gold transition-colors inline-flex items-center gap-2 mt-2 w-fit"
-            >
-              <InstagramIcon />
-              @Oliopietra
-            </a>
-          </div>
-        </div>
+        <a
+          href="#hero"
+          className="mt-6 text-[0.65rem] tracking-[0.3em] text-gold/40 hover:text-gold uppercase transition-colors"
+        >
+          Torna all&apos;inizio ↑
+        </a>
       </div>
 
       <div className="relative border-t border-gold/10 py-6 text-center text-ivory/20 text-xs tracking-wider">

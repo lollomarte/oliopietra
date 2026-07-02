@@ -1,53 +1,43 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 
-export const metadata: Metadata = {
-  title: "Contatti — Oliopietra",
-  description:
-    "Contattaci e vieni a trovarci nelle verdi colline della Tuscia, Lazio.",
-};
-
 export default function Contatti() {
   return (
-    <div className="relative bg-beige-page text-dark min-h-screen pt-16 overflow-hidden">
+    <section id="contatti" className="relative bg-beige-page text-dark py-28 px-6 overflow-hidden">
       <p
         aria-hidden
         className="pointer-events-none select-none absolute -top-4 sm:top-4 left-0 text-[16vw] leading-none whitespace-nowrap font-light text-dark/[0.035]"
         style={{ fontFamily: "var(--font-cormorant)" }}
       >
-        TUSCIA
+        GRAZIE
       </p>
 
-      <section className="relative max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-        {/* Left */}
+      <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <Reveal>
           <p className="text-xs tracking-[0.4em] text-stone/60 uppercase mb-6">
-            Vieni a trovarci
+            Per approfondire
           </p>
-          <h1
+          <h2
             className="text-4xl sm:text-5xl font-light text-dark mb-6 leading-tight"
             style={{ fontFamily: "var(--font-cormorant)" }}
           >
-            Contattaci
-          </h1>
+            Un pensiero pensato per pochi.
+          </h2>
           <p
-            className="text-xl italic text-dark/55 mb-14 font-light leading-relaxed"
+            className="text-xl italic text-dark/55 mb-12 font-light leading-relaxed"
             style={{ fontFamily: "var(--font-cormorant)" }}
           >
-            … o vieni a trovarci nelle verdi colline della Tuscia!
+            Questa bottiglia fa parte di una cerchia ristretta. Se desideri saperne di più,
+            siamo felici di risponderti.
           </p>
 
-          <div className="space-y-10">
+          <div className="space-y-8">
             <div>
               <p className="text-xs tracking-[0.3em] text-stone/60 uppercase mb-4">
                 Telefono &amp; Email
               </p>
               <div className="space-y-2 text-dark/70">
-                <a
-                  href="tel:+393401756876"
-                  className="block hover:text-olive transition-colors w-fit"
-                >
+                <a href="tel:+393401756876" className="block hover:text-olive transition-colors w-fit">
                   +39 340 175 6876
                 </a>
                 <a
@@ -56,16 +46,6 @@ export default function Contatti() {
                 >
                   contact@oliopietra.it
                 </a>
-              </div>
-            </div>
-
-            <div>
-              <p className="text-xs tracking-[0.3em] text-stone/60 uppercase mb-4">
-                Orari
-              </p>
-              <div className="space-y-1 text-dark/65 text-sm">
-                <p>Lun – Ven &nbsp;·&nbsp; 9:00 – 17:00</p>
-                <p>Sab – Dom &nbsp;·&nbsp; 9:00 – 14:00</p>
               </div>
             </div>
 
@@ -86,8 +66,7 @@ export default function Contatti() {
           </div>
         </Reveal>
 
-        {/* Right — circle image */}
-        <Reveal delay={0.15} className="flex justify-center md:justify-end items-start pt-4">
+        <Reveal delay={0.15} className="flex justify-center md:justify-end">
           <div className="group relative w-72 h-72 sm:w-[400px] sm:h-[400px] rounded-full overflow-hidden shadow-2xl ring-1 ring-dark/10">
             <Image
               src="/images/uliveto-tuscia.jpg"
@@ -98,8 +77,8 @@ export default function Contatti() {
             />
           </div>
         </Reveal>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
 
