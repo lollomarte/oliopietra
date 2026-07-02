@@ -37,8 +37,27 @@ export default function ValoriNutrizionali() {
 
         <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-14 items-center mb-16">
           <Reveal className="flex justify-center">
-            <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full border border-stone/25 flex flex-col items-center justify-center shrink-0">
-              <div className="absolute inset-3 rounded-full border border-olive/20" />
+            <div className="relative w-48 h-48 sm:w-56 sm:h-56 flex flex-col items-center justify-center shrink-0">
+              <svg className="absolute inset-0 -rotate-90" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-stone/20" />
+                <motion.circle
+                  cx="50"
+                  cy="50"
+                  r="46"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                  className="text-gold"
+                  initial={{ pathLength: 0 }}
+                  whileInView={{ pathLength: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+                />
+              </svg>
+              <svg className="absolute inset-3" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-olive/25" />
+              </svg>
               <CountUp
                 to={824}
                 className="text-5xl sm:text-6xl font-light text-dark"

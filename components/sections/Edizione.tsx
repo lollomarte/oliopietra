@@ -2,6 +2,7 @@ import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import { StaggerGroup, StaggerItem } from "@/components/Stagger";
 import CountUp from "@/components/CountUp";
+import TiltCard from "@/components/TiltCard";
 
 const features = [
   {
@@ -47,24 +48,26 @@ export default function Edizione() {
 
         <StaggerGroup className="grid grid-cols-1 md:grid-cols-3 gap-px bg-gold/10 mb-24">
           {features.map(({ n, title, body, icon: Icon }) => (
-            <StaggerItem key={title} className="group bg-dark p-8 sm:p-10">
-              <div className="flex items-start justify-between mb-8">
-                <Icon />
-                <span
-                  className="text-4xl text-ivory/[0.08] group-hover:text-gold/20 transition-colors duration-500"
+            <StaggerItem key={title} className="group bg-dark">
+              <TiltCard className="p-8 sm:p-10 h-full">
+                <div className="flex items-start justify-between mb-8">
+                  <Icon />
+                  <span
+                    className="text-4xl text-ivory/[0.08] group-hover:text-gold/20 transition-colors duration-500"
+                    style={{ fontFamily: "var(--font-cormorant)" }}
+                  >
+                    {n}
+                  </span>
+                </div>
+                <h3
+                  className="text-gold text-xl font-light tracking-wide mb-4"
                   style={{ fontFamily: "var(--font-cormorant)" }}
                 >
-                  {n}
-                </span>
-              </div>
-              <h3
-                className="text-gold text-xl font-light tracking-wide mb-4"
-                style={{ fontFamily: "var(--font-cormorant)" }}
-              >
-                {title}
-              </h3>
-              <p className="text-ivory/55 text-sm leading-relaxed mb-6">{body}</p>
-              <div className="h-px w-8 bg-gold/40 group-hover:w-16 transition-all duration-500" />
+                  {title}
+                </h3>
+                <p className="text-ivory/55 text-sm leading-relaxed mb-6">{body}</p>
+                <div className="h-px w-8 bg-gold/40 group-hover:w-16 transition-all duration-500" />
+              </TiltCard>
             </StaggerItem>
           ))}
         </StaggerGroup>
@@ -87,6 +90,8 @@ export default function Edizione() {
               />
               <div className="absolute inset-0 bg-linear-to-t from-dark/80 via-transparent to-transparent" />
               <div className="absolute inset-0 ring-1 ring-inset ring-gold/15 group-hover:ring-gold/40 transition-colors duration-500" />
+              <div className="absolute top-3 left-3 w-4 h-4 border-t border-l border-gold/0 group-hover:border-gold/60 transition-colors duration-500" />
+              <div className="absolute bottom-3 right-3 w-4 h-4 border-b border-r border-gold/0 group-hover:border-gold/60 transition-colors duration-500" />
               <p className="absolute bottom-4 left-4 text-ivory/80 text-xs tracking-[0.2em] uppercase">
                 {caption}
               </p>

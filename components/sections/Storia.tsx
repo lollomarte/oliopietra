@@ -1,7 +1,17 @@
+"use client";
+
 import Image from "next/image";
+import { motion, useScroll } from "motion/react";
+import { useRef } from "react";
 import Reveal from "@/components/Reveal";
 
 export default function Storia() {
+  const textRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: textRef,
+    offset: ["start 0.8", "end 0.4"],
+  });
+
   return (
     <section id="storia" className="relative bg-beige-page text-dark py-28 px-6 overflow-hidden">
       <p
@@ -23,7 +33,11 @@ export default function Storia() {
           >
             Storia e Filosofia
           </h2>
-          <div className="space-y-6 text-dark/65 text-base leading-relaxed">
+          <div ref={textRef} className="relative space-y-6 text-dark/65 text-base leading-relaxed md:pl-8">
+            <motion.div
+              style={{ scaleY: scrollYProgress }}
+              className="hidden md:block absolute left-0 top-1 bottom-1 w-px bg-gold/50 origin-top"
+            />
             <p>
               Oliopietra è il risultato di una passione che si tramanda di generazione in
               generazione: l&apos;amore per l&apos;olio extravergine d&apos;oliva di qualità.
